@@ -2254,8 +2254,8 @@ input, select, textarea {
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("../../images/one.jpg");
-		background-size: 256px 256px, cover;
+		/* background: url("images/overlay.png"), url("../../images/bg3.jpg"); */
+		/* background-size: 256px 256px, cover; */
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
@@ -2263,8 +2263,8 @@ input, select, textarea {
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/two.jpg");
-		background-size: 256px 256px, cover;
+		/* background: url("images/overlay.png"), url("../../images/intro.jpg");
+		background-size: 256px 256px, cover; */
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
@@ -2274,6 +2274,8 @@ input, select, textarea {
 	#contact {
 		overflow: hidden;
 		padding-bottom: 0;
+		background: rgb(84,83,94);
+		background: linear-gradient(90deg, rgb(172, 171, 180) 2%, rgb(255, 255, 255) 61%, rgb(134, 138, 139) 100%);
 	}
 
 		#contact .box {
@@ -2329,8 +2331,8 @@ input, select, textarea {
 	justify-content: center;
 	align-items: center;
 	background-image: linear-gradient(
-			 to bottom, rgb(16, 9, 110) 0%,
-			 rgb(163, 59, 158) 100%);
+			 to bottom, rgb(233, 233, 240) 0%,
+			 rgb(92, 86, 92) 100%);
 }
 
 
@@ -2340,7 +2342,7 @@ input, select, textarea {
 	border-radius: 50%;
 } 
 
-#tech-container{
+.tech-container{
 	height: 100%;
 	width: 100%;
 	align-items: center;
@@ -2355,11 +2357,14 @@ input, select, textarea {
 	max-width: 100px;
 	max-height: 100px;
 	line-height: 120px;
-	transition: 0.3s;
-	
+	transition: 0.3s;	
 }
 
-#tech-container ul li{
+.tech-name{
+	transition: 0.3s;
+}
+
+.tech-container ul li{
 	margin: 0 10px;
 	text-align: center;
 	font-size: 20px;
@@ -2367,7 +2372,28 @@ input, select, textarea {
 	padding: 25px 25px 25px 25px;
 }
 
-#tech-container ul li:hover img{
+.tech-container ul li:hover img{
 	transform: translateY(-9px) scale(1.1);
 }
+
+.gallery article:hover a{
+	transition: 0.6s;
+	filter: opacity(.5);
+}
 	
+.tech-container ul li:hover label{
+	color: #39454b;
+	transform: translateX(-9px) scale(1.1);
+}
+
+.content.box.style2:hover{
+	transition: 0.6s;
+	transform: translateX(-9px) scale(1.1);
+	background-color: #b9babb;
+	border-radius: 10px;
+}
+
+.box{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
