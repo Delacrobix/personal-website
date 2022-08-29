@@ -2245,7 +2245,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
+		background: url("images/overlay.png"), url("../../images/backgrounds/1\ \(4\).png");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2273,11 +2273,10 @@ input, select, textarea {
 /* Contact */
 
 	#contact {
+		background: url("images/overlay.png"), url("../../images/backgrounds/1\ \(4\).png");
 		overflow: hidden;
 		padding-bottom: 0;
-		background: rgb(84,83,94);
-		background: linear-gradient(90deg, rgb(172, 171, 180) 2%, rgb(255, 255, 255) 61%, rgb(134, 138, 139) 100%);
-	}
+		}
 
 		#contact .box {
 			-moz-transition: -moz-transform 1s ease;
@@ -2336,7 +2335,6 @@ input, select, textarea {
 			 rgb(92, 86, 92) 100%);
 }
 
-
 #profile-picture img{
 	width: 18.75em;
 	height: 18.75em;
@@ -2348,29 +2346,38 @@ input, select, textarea {
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	
 	display: grid;
 	grid-template-columns: repeat(3, 20%);
 }
 
 .tech-img{
 	margin: 5px;
-	max-width: 5.5em;
-	max-height: 5.5em;
+	max-width: 4.5em;
+	max-height: 4.5em;
 	line-height: 7.5em;
 	transition: 0.3s;	
 }
 
+.submit-button{
+	background-color: #545657;
+}	
+
 .tech-name{
 	transition: 0.3s;
+	margin-right: -1em;
 }
 
 .tech-container ul li{
 	margin: 0 0.625em;
 	text-align: center;
-	font-size: 1.25em;
+	font-size: 1em;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	padding: 1.5625em 1.5625em 1.5625em 1.5625em;
+	padding: 1.56em 1.56em 1.56em 1.56em;
+}
+
+.tech-container{
+	opacity: 0;
+	transition: 1s;
 }
 
 .tech-container ul li:hover img{
@@ -2385,6 +2392,7 @@ input, select, textarea {
 .tech-container ul li:hover label{
 	color: #717374;
 	transform: translateX(-9px) scale(1.1);
+	text-align: center;
 }
 
 .content.box.style2:hover{
@@ -2432,8 +2440,13 @@ input, select, textarea {
 	}
 	
 	.tech-img{
-		max-width: 5em;
-		max-height: 5em;
+		max-width: 3.5em;
+		max-height: 3.5em;
+		margin: 0em 3em 1em 3em;
+	}
+
+	.tech-name{
+		margin-right: -7em;
 	}
 
 	.tech-container ul li{
@@ -2441,48 +2454,106 @@ input, select, textarea {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
 	body{
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	.tech-container ul li{
-		font-size: 0.9em;
+		font-size: 1em;
+		margin-right: 8em;
 	}
-	
-	.tech-grid{
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		grid-template-areas: 
-			'aside 	 aside 	 aside'
-			'section section section';
-	}
-	
+
 	.tech-img{
-		max-width: 4em;
-		max-height: 4em;
+		max-width: 6em;
+		max-height: 6em;
+	}
+
+	.tech-name{
+		margin-right: -8.5em;
+	}
+
+	.cv-container{
+		margin-top: 1rem;
+	}
+
+	.cv-container a{
+		padding: 1rem;
+	}
+
+	#one{
+		justify-content: center;
+		align-items: center;
+	}
+
+	#one aside{
+		grid-area: aside;
+	}
+
+	#one section{
+		grid-area: section;
+	}
+	
+	#one{
+		display: grid;
+		grid-template-columns: repeat(1, 2fr);
+		grid-template-areas: 
+			'aside'
+			'section';
 	}
 }
 
 @media (max-width: 576px) {
-	.tech-container ul li{
-		font-size: 0.7em;
+	body{
+		font-size: 11px;
+	}
+
+	#two{
+		margin-bottom: -10em;
+		margin-top: -5em;
+	}
+
+	#one{
+		justify-content: center;
+		align-items: center;
+	}
+
+	#one aside{
+		grid-area: aside;
+	}
+
+	#one section{
+		grid-area: section;
+	}
+
+	.tech-container ul{
+		margin-right: 3.5em;
 	}
 
 	.tech-img{
-		max-width: 4em;
-		max-height: 4em;
+		max-width: 3.5em;
+		max-height: 3.5em;
+		margin: 2em 1.5em 2em 1.5em;
+	}
+
+	.tech-name{
+		margin-top: -2em;
+		margin-right: -8.5em;
 	}
 
 	.tech-grid{
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-areas: 
-			'aside 	 aside 	 aside'
-			'section section section';
+			'aside'
+			'section';
 	}
 
-	.tech-container ul li{
-		font-size: 0.7em;
+	.cv-container{
+		margin-top: 1rem;
+	}
+
+	.cv-container a{
+		padding: 1rem;
 	}
 }

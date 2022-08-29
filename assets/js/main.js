@@ -165,6 +165,7 @@
 				// Galleries.
 					$('.gallery')
 						.unscrollex();
+						
 
 				// Generic sections.
 					$('.main.style1')
@@ -217,3 +218,20 @@
 			});
 
 })(jQuery);
+
+
+// *TechContainer scroll animation
+var element_toAnimate = document.querySelector(".tech-container");
+
+function showScroll(){
+	let scrollTop = document.documentElement.scrollTop;
+	let height = element_toAnimate.offsetTop;
+
+	element_toAnimate.style.opacity = 0;
+
+	if((height + 1250) < scrollTop && ((height + 2100) > scrollTop)){
+		element_toAnimate.style.opacity = 1	;
+	}
+}
+
+window.addEventListener('scroll', showScroll);
