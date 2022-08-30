@@ -219,19 +219,51 @@
 
 })(jQuery);
 
-
-// *TechContainer scroll animation
+/*
+	* TechContainer scroll animation
+*/
 var element_toAnimate = document.querySelector(".tech-container");
 
 function showScroll(){
 	let scrollTop = document.documentElement.scrollTop;
 	let height = element_toAnimate.offsetTop;
-
 	element_toAnimate.style.opacity = 0;
 
-	if((height + 1250) < scrollTop && ((height + 2100) > scrollTop)){
-		element_toAnimate.style.opacity = 1	;
+	console.log("H: ",  screen.height, "W: ", screen.width)
+
+	if(screen.height < 650){
+		if((height + 600) < scrollTop && ((height + 1000) > scrollTop)){
+			element_toAnimate.style.opacity = 1	;
+		}
+	}
+
+	if((screen.height < 800) && (screen.height > 649)){
+		if((height + 1000) < scrollTop && ((height + 1600) > scrollTop)){
+			element_toAnimate.style.opacity = 1	;
+		}
+	}
+
+	if((screen.height < 1300) && (screen.height > 799)){
+		if((height + 1600) < scrollTop && ((height + 2500) > scrollTop)){
+			element_toAnimate.style.opacity = 1	;
+		}
+	}
+
+	if((screen.height < 1700) && (screen.height > 1299)){
+		if((height + 2000) < scrollTop && ((height + 3400) > scrollTop)){
+			element_toAnimate.style.opacity = 1	;
+		}
 	}
 }
 
 window.addEventListener('scroll', showScroll);
+
+/* 
+	* code for button dark mode 
+*/
+var btn_switch = document.querySelector('#switch');
+
+btn_switch.addEventListener('click', () => {
+	document.body.classList.toggle('dark');
+	btn_switch.classList.toggle('active');
+});

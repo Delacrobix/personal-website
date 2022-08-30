@@ -1,0 +1,92 @@
+/* Night Mode button*/
+body.dark {
+  background-color: #121212;
+}
+body.dark #header {
+  background-color: #262727;
+  color: #ffffff;
+}
+body.dark #work {
+  background-color: #121212;
+  color: #ffffff;
+}
+body.dark .box {
+  background-color: #262727;
+  color: #ffffff;
+}
+body.dark .box ::-webkit-input-placeholder {
+  color: #ffffff;
+}
+body.dark .box :-moz-placeholder {
+  color: #ffffff;
+}
+body.dark .box ::-moz-placeholder {
+  color: rgb(255, 255, 255);
+}
+body.dark .box :-ms-input-placeholder {
+  color: #ffffff;
+}
+body.dark #footer {
+  background-color: #343D5B;
+}
+body.dark .content.box.style2 {
+  background-color: #424755;
+  color: #cccccc;
+}
+body.dark .content.box.style2:hover {
+  background-color: #555963;
+  color: #ffffff;
+}
+body.dark .tech-container {
+  color: #121212;
+}
+body.dark .tech-container ul li:hover label {
+  color: #d6d5d5;
+}
+body.dark .cv-container a {
+  color: #000000;
+}
+
+.switch {
+  background-color: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  padding: 5px 5px 3px 5px;
+  align-items: center;
+  justify-content: center;
+}
+.switch::after {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3 ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch.active {
+  background: rgb(192, 192, 192);
+  color: #000;
+}
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+  margin: 0px 0px 0px 5px;
+}/*# sourceMappingURL=night-mode.css.map */
