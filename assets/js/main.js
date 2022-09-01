@@ -244,7 +244,7 @@ function showScroll(){
 	}
 
 	if((screen.height < 1300) && (screen.height > 799)){
-		if((height + 1600) < scrollTop && ((height + 2500) > scrollTop)){
+		if((height + 1400) < scrollTop && ((height + 2500) > scrollTop)){
 			element_toAnimate.style.opacity = 1	;
 		}
 	}
@@ -267,3 +267,20 @@ btn_switch.addEventListener('click', () => {
 	document.body.classList.toggle('dark');
 	btn_switch.classList.toggle('active');
 });
+
+/*
+	* Code for buttons for repositories
+*/
+
+var buttons_repository = document.querySelector('.work-repository');
+
+buttons_repository.forEach(e => e.addEventListener('click', function(){
+
+    if(this.id == 'wr1'){
+		window.location.replace("http://sitioweb.com");
+	} else if(this.id == 'wr2'){
+		window.location.replace("http://sitioweb.com");
+	} else if(this.id == 'wr3'){
+		window.location.replace("https://github.com/Delacrobix/juego-dados");
+	}
+})); 

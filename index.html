@@ -27,8 +27,8 @@
 						</div>
 					</li>
 					<li><a href="#intro">Intro</a></li>
-					<li><a href="#one">What I Do</a></li>
 					<li><a href="#two">Who I Am</a></li>
+					<li><a href="#one">What I Do</a></li>
 					<li><a href="#work">My Work</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
@@ -137,13 +137,27 @@
 				<!-- Gallery  -->
 					<div class="gallery">
 						<article class="from-left">
-							<a href="images/fulls/bingo.png" class="image fit"><img src="images/prev/bingo.png" title="Bingo" alt="" /></a>
+							<a href="#" class="image fit"><img src="images/prev/bingo.png" title="Bingo" alt="" /></a>
+							<div class="work-image-menu">
+								<a href="./images/fulls/bingo.png" id="work-image"><img title="Bingo"> Expand image</a>
+								<a href="#"  class="work-repository" id="wr1">Watch repository</a>
+							</div>
 						</article>
 						<article class="from-right">
-							<a href="images/fulls/contact-book.png" class="image fit"><img src="images/prev/contact-book.png" title="Contact book" alt="" /></a>
+							<a href="#" class="image fit"><img src="./images/prev/contact-book.png" title="Contact book" alt="" /></a>
+							<div class="work-image-menu">
+								<a href="./images/fulls/contact-book.png" id="work-image"><img title="Contact book"> Expand image</a>
+								<a href="#" target="_blank" class="work-repository" id="wr2"> Watch repository</a>
+							</div>
 						</article>
 						<article class="from-left">
-							<a href="images/fulls/juego-dados.png" class="image fit"><img src="images/prev/juego-dados.png" title="Dices game" alt="" /></a>
+							<a href="#" class="image fit">
+								<img src="images/prev/juego-dados.png" title="Dices game"/>
+							</a>
+							<div class="work-image-menu">
+								<a href="images/fulls/juego-dados.png" id="work-image"><img title="Dices game"> Expand image</a>
+								<a href="#" target="_blank" class="work-repository" id="wr3">Watch repository</a>
+							</div>
 						</article>
 					</div>
 			</div>
@@ -164,7 +178,7 @@
 							<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
 						</div>
 						<ul class="actions special">
-							<li><input type="submit" value="Send Message" class="submit-button"/></li>
+							<li><button id="contact-submit" type="submit" value="Send Message">Send</button></li>
 						</ul>
 					</form>
 				</div>

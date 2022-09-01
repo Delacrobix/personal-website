@@ -2324,8 +2324,8 @@ input, select, textarea {
 }
 
 #image-container{
-	width: 18em;
-	height: 18em;
+	width: 18.5em;
+	height: 19em;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -2413,6 +2413,16 @@ input, select, textarea {
 .box{
 	border-top-left-radius: 0.625em;
 	border-top-right-radius: 0.625em;
+}
+
+#contact-submit{
+	background-color: #464646;
+	font-size: 1.2rem;
+}
+
+#contact-submit:hover{
+	background-color: #616161;
+	font-size: 1.2rem;
 }
 
 ::-webkit-input-placeholder {color: black;}
