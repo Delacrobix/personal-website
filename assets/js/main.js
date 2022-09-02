@@ -229,8 +229,6 @@ function showScroll(){
 	let height = element_toAnimate.offsetTop;
 	element_toAnimate.style.opacity = 0;
 
-	console.log("H: ",  screen.height, "W: ", screen.width)
-
 	if(screen.height < 650){
 		if((height + 600) < scrollTop && ((height + 1000) > scrollTop)){
 			element_toAnimate.style.opacity = 1	;
@@ -258,6 +256,60 @@ function showScroll(){
 
 window.addEventListener('scroll', showScroll);
 
+/*
+	* Works scroll animation
+*/
+var imgs = document.querySelectorAll(".work-container");
+
+function showScroll_works(){
+	let scrollTop = document.documentElement.scrollTop;
+
+	let img_height = 200;
+	let counter = 0;
+
+	imgs.forEach(element => {
+		element.style.opacity = 0;
+		counter += 1;
+	});
+
+	console.log("H: ",  screen.height, "W: ", screen.width)
+	console.log("Scroll: ", scrollTop)
+
+	if(screen.height < 650){
+		if((scrollTop > 1545) && (scrollTop < 2200)){
+			imgs.forEach(element => {
+				element.style.opacity = 1;
+			});
+		}	
+	}
+
+	if((screen.height < 800) && (screen.height > 649)){
+		if((scrollTop > 1545) && (scrollTop < 2200)){
+			imgs.forEach(element => {
+				element.style.opacity = 1;
+			});
+		}	
+	}
+
+	if((screen.height < 1300) && (screen.height > 799)){
+		if((scrollTop > 1545) && (scrollTop < 2200)){
+			imgs.forEach(element => {
+				element.style.opacity = 1;
+			});
+		}	
+	}
+
+	if((screen.height < 1700) && (screen.height > 1299)){
+		if((scrollTop > 1545) && (scrollTop < 1345)){
+			imgs.forEach(element => {
+				element.style.opacity = 1;
+			});
+		}
+	}
+}
+
+window.addEventListener('scroll', showScroll_works);
+
 /* 
 	* code for button dark mode 
 */
@@ -267,20 +319,3 @@ btn_switch.addEventListener('click', () => {
 	document.body.classList.toggle('dark');
 	btn_switch.classList.toggle('active');
 });
-
-/*
-	* Code for buttons for repositories
-*/
-
-var buttons_repository = document.querySelector('.work-repository');
-
-buttons_repository.forEach(e => e.addEventListener('click', function(){
-
-    if(this.id == 'wr1'){
-		window.location.replace("http://sitioweb.com");
-	} else if(this.id == 'wr2'){
-		window.location.replace("http://sitioweb.com");
-	} else if(this.id == 'wr3'){
-		window.location.replace("https://github.com/Delacrobix/juego-dados");
-	}
-})); 
