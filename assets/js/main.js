@@ -230,7 +230,7 @@ function showScroll(){
 	element_toAnimate.style.opacity = 0;
 
 	if(screen.height < 650){
-		if((height + 600) < scrollTop && ((height + 1000) > scrollTop)){
+		if((1030 < scrollTop) && (1530 > scrollTop)){
 			element_toAnimate.style.opacity = 1	;
 		}
 	}
@@ -241,8 +241,14 @@ function showScroll(){
 		}
 	}
 
-	if((screen.height < 1300) && (screen.height > 799)){
-		if((height + 1400) < scrollTop && ((height + 2500) > scrollTop)){
+	if((screen.height < 1000) && (screen.height > 799)){
+		if((1500 < scrollTop) && (2200 > scrollTop)){
+			element_toAnimate.style.opacity = 1	;
+		}
+	}
+
+	if((screen.height < 1300) && (screen.height > 1000)){
+		if((1460 < scrollTop) && (2360 > scrollTop)){
 			element_toAnimate.style.opacity = 1	;
 		}
 	}
@@ -264,19 +270,15 @@ var imgs = document.querySelectorAll(".work-container");
 function showScroll_works(){
 	let scrollTop = document.documentElement.scrollTop;
 
-	let img_height = 200;
-	let counter = 0;
-
 	imgs.forEach(element => {
 		element.style.opacity = 0;
-		counter += 1;
 	});
 
 	console.log("H: ",  screen.height, "W: ", screen.width)
 	console.log("Scroll: ", scrollTop)
 
 	if(screen.height < 650){
-		if((scrollTop > 1545) && (scrollTop < 2200)){
+		if((scrollTop > 1680) && (scrollTop < 2200)){
 			imgs.forEach(element => {
 				element.style.opacity = 1;
 			});
@@ -291,8 +293,16 @@ function showScroll_works(){
 		}	
 	}
 
-	if((screen.height < 1300) && (screen.height > 799)){
-		if((scrollTop > 1545) && (scrollTop < 2200)){
+	if((screen.height < 1000) && (screen.height > 799)){
+		if((scrollTop > 2170) && (scrollTop < 2800)){
+			imgs.forEach(element => {
+				element.style.opacity = 1;
+			});
+		}	
+	}
+
+	if((screen.height < 1300) && (screen.height > 1000)){
+		if((scrollTop > 2260) && (scrollTop < 3100)){
 			imgs.forEach(element => {
 				element.style.opacity = 1;
 			});
@@ -300,7 +310,7 @@ function showScroll_works(){
 	}
 
 	if((screen.height < 1700) && (screen.height > 1299)){
-		if((scrollTop > 1545) && (scrollTop < 1345)){
+		if((scrollTop > 2951) && (scrollTop < 3900)){
 			imgs.forEach(element => {
 				element.style.opacity = 1;
 			});
