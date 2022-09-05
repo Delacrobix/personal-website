@@ -223,40 +223,16 @@
 	* TechContainer scroll animation
 */
 var element_toAnimate = document.querySelector(".tech-container");
+var skills_tittle = document.querySelector("#skills-tittle");
 
 function showScroll(){
-	let scrollTop = document.documentElement.scrollTop;
-	let height = element_toAnimate.offsetTop;
+	let skills_tittleHeight = skills_tittle.getBoundingClientRect().top;
+	let element_toAnimateHeight = element_toAnimate.getBoundingClientRect().top;
+
 	element_toAnimate.style.opacity = 0;
-
-	if(screen.height < 650){
-		if((1030 < scrollTop) && (1530 > scrollTop)){
-			element_toAnimate.style.opacity = 1	;
-		}
-	}
-
-	if((screen.height < 800) && (screen.height > 649)){
-		if((height + 1000) < scrollTop && ((height + 1600) > scrollTop)){
-			element_toAnimate.style.opacity = 1	;
-		}
-	}
-
-	if((screen.height < 1000) && (screen.height > 799)){
-		if((1500 < scrollTop) && (2200 > scrollTop)){
-			element_toAnimate.style.opacity = 1	;
-		}
-	}
-
-	if((screen.height < 1300) && (screen.height > 1000)){
-		if((1460 < scrollTop) && (2360 > scrollTop)){
-			element_toAnimate.style.opacity = 1	;
-		}
-	}
-
-	if((screen.height < 1700) && (screen.height > 1299)){
-		if((height + 2000) < scrollTop && ((height + 3400) > scrollTop)){
-			element_toAnimate.style.opacity = 1	;
-		}
+	
+	if((screen.height/2 > skills_tittleHeight) && (element_toAnimateHeight > 0)){
+		element_toAnimate.style.opacity = 1	;
 	}
 }
 
@@ -266,56 +242,28 @@ window.addEventListener('scroll', showScroll);
 	* Works scroll animation
 */
 var imgs = document.querySelectorAll(".work-container");
+var imgs_container = document.querySelector(".section-gallery");
+var work_tittle = document.querySelector('#work-tittle');
 
 function showScroll_works(){
+	let work_tittleHeight = work_tittle.getBoundingClientRect().top;
+	let imgs_height = imgs_container.getBoundingClientRect().top;
 	let scrollTop = document.documentElement.scrollTop;
 
 	imgs.forEach(element => {
 		element.style.opacity = 0;
 	});
 
+	
+	if((screen.height/2 > work_tittleHeight) && (imgs_height > 0)){
+		imgs.forEach(element => {
+			element.style.opacity = 1;
+		});
+	}
+
+	console.log("AS", work_tittleHeight)
 	console.log("H: ",  screen.height, "W: ", screen.width)
 	console.log("Scroll: ", scrollTop)
-
-	if(screen.height < 650){
-		if((scrollTop > 1680) && (scrollTop < 2200)){
-			imgs.forEach(element => {
-				element.style.opacity = 1;
-			});
-		}	
-	}
-
-	if((screen.height < 800) && (screen.height > 649)){
-		if((scrollTop > 1545) && (scrollTop < 2200)){
-			imgs.forEach(element => {
-				element.style.opacity = 1;
-			});
-		}	
-	}
-
-	if((screen.height < 1000) && (screen.height > 799)){
-		if((scrollTop > 2170) && (scrollTop < 2800)){
-			imgs.forEach(element => {
-				element.style.opacity = 1;
-			});
-		}	
-	}
-
-	if((screen.height < 1300) && (screen.height > 1000)){
-		if((scrollTop > 2260) && (scrollTop < 3100)){
-			imgs.forEach(element => {
-				element.style.opacity = 1;
-			});
-		}	
-	}
-
-	if((screen.height < 1700) && (screen.height > 1299)){
-		if((scrollTop > 2951) && (scrollTop < 3900)){
-			imgs.forEach(element => {
-				element.style.opacity = 1;
-			});
-		}
-	}
 }
 
 window.addEventListener('scroll', showScroll_works);

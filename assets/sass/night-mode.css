@@ -349,11 +349,14 @@ body.dark #contact-submit:hover {
     margin-right: -3em;
   }
   .section-gallery {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
   }
-  .section-gallery figure {
-    width: 100%;
+  .section-gallery .work-container {
+    width: 95%;
+    padding: 0;
+    margin: 0;
+  }
+  .section-gallery .work-container .layer a {
+    padding: 1em 2em 1em 2em;
   }
 }/*# sourceMappingURL=night-mode.css.map */
