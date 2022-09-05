@@ -56,6 +56,14 @@ body.dark #contact-submit:hover {
   font-size: 1.2rem;
   color: #000;
 }
+body.dark #switch-mobile i:first-child {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+body.dark #switch-mobile i:nth-of-type(2) {
+  display: none;
+}
 
 .switch {
   background-color: #343D5B;
@@ -172,6 +180,48 @@ body.dark #contact-submit:hover {
   filter: blur(4px);
 }
 
+/* Mobile dark buttons styles */
+.content footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#switch-mobile {
+  opacity: 0;
+  visibility: hidden;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  display: none;
+  margin-left: 1em;
+  position: relative;
+  transition: 0.5s;
+}
+#switch-mobile i {
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.7s ease-out;
+}
+#switch-mobile i:first-child {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+#switch-mobile:active i {
+  filter: opacity(0);
+}
+
+#switch-mobile:hover {
+  background-color: rgba(124, 124, 124, 0.3568627451);
+}
+
+/*  Responsive design */
 @media (max-width: 992px) {
   body {
     font-size: 14px;
@@ -230,8 +280,21 @@ body.dark #contact-submit:hover {
     grid-template-columns: repeat(1, 2fr);
     grid-template-areas: "aside" "section";
   }
-  .section-gallery figure {
+  .section-gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section-gallery .work-container {
     width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .section-gallery .work-container .layer a {
+    padding: 1em 2em 1em 2em;
+  }
+  #switch-mobile {
+    visibility: visible;
+    opacity: 1;
+    display: block;
   }
 }
 @media (max-width: 576px) {
@@ -296,6 +359,11 @@ body.dark #contact-submit:hover {
   .section-gallery .work-container .layer a {
     padding: 1em 2em 1em 2em;
   }
+  #switch-mobile {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
 }
 @media (max-width: 320px) {
   body {
@@ -358,5 +426,10 @@ body.dark #contact-submit:hover {
   }
   .section-gallery .work-container .layer a {
     padding: 1em 2em 1em 2em;
+  }
+  #switch-mobile {
+    visibility: visible;
+    opacity: 1;
+    display: block;
   }
 }/*# sourceMappingURL=night-mode.css.map */

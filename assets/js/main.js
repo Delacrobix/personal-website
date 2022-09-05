@@ -271,9 +271,19 @@ window.addEventListener('scroll', showScroll_works);
 /* 
 	* code for button dark mode 
 */
-var btn_switch = document.querySelector('#switch');
+var btn_switch = document.querySelector('.switch');
 
 btn_switch.addEventListener('click', () => {
 	document.body.classList.toggle('dark');
 	btn_switch.classList.toggle('active');
+});
+
+/* 
+	* code for button dark mode (mobile)
+*/
+var btn_switchMobile = document.querySelector('#switch-mobile');
+
+btn_switchMobile.addEventListener('click', () => {
+	document.body.classList.toggle('dark');
+	btn_switchMobile.classList.toggle('active');
 });
