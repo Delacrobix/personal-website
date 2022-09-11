@@ -247,23 +247,21 @@ var work_tittle = document.querySelector('#work-tittle');
 
 function showScroll_works(){
 	let work_tittleHeight = work_tittle.getBoundingClientRect().top;
-	let imgs_height = imgs_container.getBoundingClientRect().top;
 	let scrollTop = document.documentElement.scrollTop;
+	let last_img;
 
 	imgs.forEach(element => {
 		element.style.opacity = 0;
+		last_img = element;
 	});
 
+	let last_imgHeight = last_img.getBoundingClientRect().top;
 	
-	if((screen.height/2 > work_tittleHeight) && (imgs_height > 0)){
+	if((screen.height/2 > work_tittleHeight) && (last_imgHeight > 0)){
 		imgs.forEach(element => {
 			element.style.opacity = 1;
 		});
 	}
-
-	console.log("AS", work_tittleHeight)
-	console.log("H: ",  screen.height, "W: ", screen.width)
-	console.log("Scroll: ", scrollTop)
 }
 
 window.addEventListener('scroll', showScroll_works);
